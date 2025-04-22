@@ -1,0 +1,142 @@
+{% extends 'layout.html' %}
+
+{% block title %}Join the Hershey Team{% endblock %}
+ 
+{% block content %}
+<div class="container-fluid py-5">
+    <!-- Title Section -->
+    <h3 class="text-center text-chocolate mb-4">Hershey Career Opportunities</h3>
+
+    <!-- Hero Section -->
+    <section class="text-center mb-5 bg-chocolate" style="padding: 10px">
+        <h5 class="lead mb-4">Our Global Recruitment.</h5>
+        <p class="text-light mb-4" style="font-size: 1rem;">We have expanded our workforce globally, including West Africa, Qatar, UAE, Italy, Kenya, and South Africa. Join us in the USA and be part of our growing family.</p>
+        <p class="text-light mb-4" >Interested in working with Hershey? Take the first step today by joining our Talent Community. </p>
+        <button class="btn btn-chocolate btn-lg" onclick="window.location.href='{{ url_for('main.form') }}'">Apply Now</button>
+    </section>
+ 
+    <!-- Job Categories Section -->
+    <section class="mb-5">
+        <div class="container" style="max-width: 50%; width: 100%;">
+            <div class="row row-cols-1 row-cols-md-3 g-1" style="margin-top: -20px;">
+                <div class="col text-center">
+                    <img src="{{ url_for('static', filename='images/manufacturing.jpg') }}" class="w-100" alt="Preparation of Chocolate">
+                    <h6 class="text-chocolate mt-2">Manufacturing Chocolate</h6>
+                </div>
+                <div class="col text-center">
+                    <img src="{{ url_for('static', filename='images/security.png') }}" class="w-100" alt="Security Job">
+                    <h6 class="text-chocolate mt-2">Security Job</h6>
+                </div>
+                <div class="col text-center">
+                    <img src="{{ url_for('static', filename='images/driver.png') }}" class="w-100" alt="Driving Job">
+                    <h6 class="text-chocolate mt-2">Driving Job</h6>
+                </div>
+                <div class="col text-center">
+                    <img src="{{ url_for('static', filename='images/sales.png') }}" class="w-100" alt="Sales Representative">
+                    <h6 class="text-chocolate mt-2">Sales Representative</h6>
+                </div>
+                <div class="col text-center">
+                    <img src="{{ url_for('static', filename='images/cleaner.png') }}" class="w-100" alt="Cleaning Service">
+                    <h6 class="text-chocolate mt-2">Cleaning Service</h6>
+                </div>
+                <div class="col text-center">
+                    <img src="{{ url_for('static', filename='images/cook.png') }}" class="w-100" alt="Cook">
+                    <h6 class="text-chocolate mt-2">Cook</h6>
+                </div>
+                <div class="col text-center">
+                    <img src="{{ url_for('static', filename='images/construction.png') }}" class="w-100" alt="Building Construction">
+                    <h6 class="text-chocolate mt-2">Building Construction</h6>
+                </div>
+                <div class="col text-center">
+                    <img src="{{ url_for('static', filename='images/electrician.jpg') }}" class="w-100" alt="Company Electrician">
+                    <h6 class="text-chocolate mt-2">Company Electrician</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+    <style>
+        @media (max-width: 768px) {
+            .container {
+                max-width: 100% !important;
+            }
+        }
+    </style>
+    <section class="text-center mb-3" style="margin-top: -40px;">
+        <button class="btn btn-primary btn-lg" onclick="window.location.href='{{ url_for('main.form') }}'">Apply Now</button>
+    </section>
+
+    <!-- Merged Why Work with Us and Benefits Section -->
+    <section class="mb-5">
+        <h3 class="text-chocolate text-center">Why Work with Us</h3>
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <img src="{{ url_for('static', filename='images/team4.jpg') }}" alt="Why Work with Us" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-md-6">
+                <p class="text-muted">At Hershey's, we value dedication, trustworthiness, and a passion for excellence. We offer competitive salaries, benefits, and opportunities to grow in a supportive environment.</p>
+                <ul class="list-unstyled text-chocolate">
+                    <li><i class="fas fa-check-circle text-success me-2"></i>Competitive Salaries</li>
+                    <li><i class="fas fa-check-circle text-success me-2"></i>Supportive Environment</li>
+                    <li><i class="fas fa-check-circle text-success me-2"></i>Opportunities for Growth</li>
+                    <li><i class="fas fa-star text-warning me-2"></i>Monthly Salary: $1,750 (for select roles)</li>
+                    <li><i class="fas fa-star text-warning me-2"></i>Weekly Feeding Allowance: $250</li>
+                    <li><i class="fas fa-star text-warning me-2"></i>Overtime Bonuses</li>
+                    <li><i class="fas fa-star text-warning me-2"></i>Accommodation Provided</li>
+                    <li><i class="fas fa-star text-warning me-2"></i>Travel Expenses Covered</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Gallery Section -->
+    <section class="gallery mb-5">
+
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="text-center">
+                    <img src="{{ url_for('static', filename='images/team1.jpg') }}" alt="Team Member 1" class="img-fluid shadow">
+                    <p class="text-center mt-2 text-chocolate">Teamwork</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="text-center">
+                    <img src="{{ url_for('static', filename='images/team2.jpg') }}" alt="Team Member 2" class="img-fluid shadow">
+                    <p class="text-center mt-2 text-chocolate">Innovation at Hershey</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="text-center">
+                    <img src="{{ url_for('static', filename='images/team3.jpg') }}" alt="Team Member 3" class="img-fluid shadow">
+                    <p class="text-center mt-2 text-chocolate">Passion for Excellence</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Process Section -->
+    <section class="bg-light p-4 rounded shadow mb-5">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h3 class="text-chocolate">Application Process</h3>
+                <ol class="text-chocolate">
+                    <li>Submit your application through our online form.</li>
+                    <li>Provide necessary documents, including your passport and birth certificate.</li>
+                    <li>Obtain the Hershey Travelling Serial Code for verification.</li>
+                    <li>Complete the interview and visa application process.</li>
+                    <li>Join our team and start your journey with Hershey's!</li>
+                </ol>
+            </div>
+            <div class="col-md-6">
+                <img src="{{ url_for('static', filename='images/team5.png') }}" alt="Application Process" class="img-fluid rounded shadow">
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="text-center">
+        <h2 class="mb-3 text-chocolate">Ready to Join Us?</h2>
+        <p class="mb-4 text-muted">Take the first step towards an exciting career with Hershey's. Click below to apply now!</p>
+        <button class="btn btn-primary btn-lg" onclick="window.location.href='{{ url_for('main.form') }}'">Apply Now</button>
+    </section>
+</div>
+{% endblock %}

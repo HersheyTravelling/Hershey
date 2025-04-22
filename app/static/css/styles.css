@@ -1,0 +1,278 @@
+/* Updated font family and sizes for better readability */
+body {
+    font-family: 'Arial', sans-serif; /* Changed to a more readable font */
+    font-size: 16px; /* Increased base font size */
+    line-height: 1.6; /* Improved line spacing */
+    background-color: rgba(62, 0, 15, 0.9); /* Hershey-inspired chocolate brown */
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 2rem;
+    background-color: rgba(62, 0, 15, 0.9); /* Slightly transparent header */
+}
+
+a{
+  text-decoration: none;
+}
+nav {
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.gallery img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.apply-button {
+    display: block;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    background-color: #D3D3D3; /* Soft gray */
+    color: rgba(62, 0, 15, 0.9);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.apply-button:hover {
+    background-color: #fff;
+}
+
+main {
+    padding: 2rem;
+}
+
+.contact-info {
+    max-width: 600px;
+    margin: 2rem auto;
+    font-size: 1.2rem;
+}
+
+.contact-info p {
+    margin: 1rem 0;
+}
+
+.contact-info a {
+    color: rgba(62, 0, 15, 0.9); /* Black text */
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Added styles to align the Hershey logo to the left and menu items to the right */
+.custom-header-row-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.custom-header-column-0 {
+    flex: 0 0 auto;
+}
+
+.custom-header-column-1 {
+    flex: 1 1 auto;
+    text-align: right;
+}
+
+/* Ensure nav box matches the height of the Hershey image */
+.nav {
+    max-height: 100px;
+    display: flex;
+    align-items: center;
+    width: 100%; /* Extend nav bar to full device width */
+    color: rgb(251, 238, 221);
+    margin-left: 0; /* Reset margin to align properly */
+    padding-left: 20px; /* Adjust padding to reduce space between image and menu */
+}
+
+/* Remove space on the left of the Hershey image */
+.img-fluid {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+/* Update menu item colors to green */
+.nav-link {
+    font-size: 1.1rem; /* Slightly larger font size for navigation links */
+    color: rgb(251, 238, 211);
+}
+
+.text-chocolate {
+    color: rgba(62, 0, 15, 0.9);
+}
+
+.bg-chocolate {
+    background-color: rgba(62, 0, 15, 0.9);
+    color: #fff;
+}
+
+.navbar-nav .nav-link {
+    padding: 0.5rem 1rem;
+}
+
+.navbar-brand img {
+    max-height: 100px; /* Adjusted to fit within the taller navbar */
+}
+
+/* Style for the left side of the navbar */
+.navbar-left {
+    background-color: white;
+    padding: 0 1rem;
+    height: 120px; /* Increased height */
+    display: flex;
+    align-items: center;
+}
+
+/* Style for the right side of the navbar */
+.navbar-right {
+    background-color: rgba(62, 0, 15, 0.9); /* Chocolate background */
+    height: 120px; /* Match the height of the left side */
+    display: flex;
+    align-items: center;
+}
+
+/* Ensure the navbar sections align properly */
+.container-fluid.d-flex {
+    display: flex;
+    align-items: center;
+    height: 120px; /* Match the overall navbar height */
+}
+
+/* Ensure text is #3E000F on white or light backgrounds */
+.bg-white {
+    color: rgba(62, 0, 15, 0.9); /* Chocolate text */
+}
+
+.form-label, .contact-info p, .contact-info a, .text-dark {
+    color: rgba(62, 0, 15, 0.9); /* Chocolate text */
+}
+
+/* Ensure buttons on white backgrounds have proper contrast */
+.btn-primary {
+    background-color: rgba(62, 0, 15, 0.9); /* Chocolate color */
+    border-color: rgba(62, 0, 15, 0.9);
+    font-size: 1.1rem; /* Increased button font size for better visibility */
+}
+
+.btn-chocolate {
+    background-color: rgb(248, 246, 247); /* Chocolate color */
+    border-color: rgba(250, 248, 249, 0.9);
+    color: rgba(62, 0, 15, 0.9);
+    font-size: 1.1rem; /* Increased button font size for better visibility */
+}
+
+.btn-primary:hover {
+    background-color: rgba(62, 0, 15, 0.9); /* Darker chocolate color */
+    border-color: rgba(62, 0, 15, 0.9);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Georgia', serif; /* Use a serif font for headings */
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+h1 {
+    font-size: 2.5rem; /* Larger size for main headings */
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+p, li, a {
+    font-size: 1rem; /* Standardized font size for body text */
+}
+
+.form-control, .form-select, textarea {
+    font-size: 1rem; /* Improved input field font size */
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Slightly reduced font size for mobile */
+        line-height: 1.5; /* Adjusted line spacing for readability */
+    }
+
+    .container-fluid {
+        padding: 0 15px; /* Add padding to prevent content from touching screen edges */
+    }
+
+    h1 {
+        font-size: 2rem; /* Adjust heading size for mobile */
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    p, li, a {
+        font-size: 0.9rem; /* Slightly smaller text for body content */
+    }
+
+    .btn-primary, .btn-chocolate {
+        font-size: 1rem; /* Adjust button font size for mobile */
+    }
+
+    .form-control, .form-select, textarea {
+        font-size: 0.9rem; /* Adjust input field font size for mobile */
+    }
+
+    .navbar-nav {
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: center;
+    }
+
+    .nav-item {
+        margin-bottom: 10px; /* Add spacing between nav items */
+    }
+}

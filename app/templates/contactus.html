@@ -1,0 +1,49 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+  Contact Us - Hersheys Career Home
+{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <section class="text-center mb-5">
+        <h1 class="text-chocolate">Contact Us</h1>
+        <p class="lead text-dark">We'd love to hear from you! Reach out to us through the following channels:</p>
+    </section>
+
+    <section class="text-center mb-5">
+        <h2 class="text-chocolate">Agents Phone Numbers</h2>
+        <div class="row justify-content-center">
+            <!-- Agent West Africa -->
+            <div class="col-md-4 mb-4">
+               <h5 class="text-chocolate">West Africa</h5>
+                <img src="{{ url_for('static', filename='images/agent.jpg') }}" class="img-fluid rounded-circle mb-2" alt="Agent West Africa" style="width: 150px; height: 150px; object-fit: cover;">
+               <h5 class="text-chocolate">Mr Francis Armah</h5>
+                <p class="text-muted"><a href="tel:+233248461919" class="text-dark">+(233) 248 461 919</a></p>
+            </div>
+            <!-- Agent South America -->
+            <div class="col-md-4 mb-4">
+              <h5 class="text-chocolate">South America</h5>
+                <img src="{{ url_for('static', filename='images/south.jpg') }}" class="img-fluid rounded-circle mb-2" alt="Agent South America" style="width: 150px; height: 150px; object-fit: cover;">
+                <h5 class="text-chocolate">Ruiz America</h5>
+                <p class="text-muted"><a href="tel:+591987654321" class="text-dark">+(591) 987 654 321</a></p>
+            </div>
+            <!-- WhatsApp Contact -->
+            <div class="col-md-4 mb-4">
+                <div class="mb-2">
+                    <i class="fab fa-whatsapp fa-4x text-success"></i>
+                </div>
+                <h5 class="text-chocolate">WhatsApp</h5>
+                <p class="text-muted">
+                    <a href="https://wa.me/+233201857530" target="_blank" class="text-dark">(+233) 201 857 530</a>
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="text-center">
+        <h2 class="text-chocolate">Follow Us</h2>
+        <p>
+            <span class="arrow-down">⬇️</span>
+        </p>
+</div>
+{% endblock %}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Hersheys Career Home{% endblock %}</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Cloudflare CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        @media (max-width: 768px) {
+            .navbar-nav {
+                flex-direction: column;
+                align-items: center;
+                padding-top: 10px; /* Add padding to prevent overflow */
+            }
+            .nav-item {
+                margin-bottom: 2px; /* Reduce spacing between items */
+            }
+            .navbar-collapse {
+                max-height: 90vh; /* Limit height to prevent overflow */
+                overflow-y: auto; /* Enable scrolling if needed */
+            }
+            .navbar-toggler {
+                position: absolute;
+                left: 10px; /* Move the button to the left */
+                color: #ffff; /* Set button icon color */
+                border-color: #ffff; /* Set button border color */
+            }
+            .navbar-toggler-icon {
+                background-color: rgba(62, 0, 15, 0.9); /* Set background color for the icon */
+            } 
+            .navbar-left {
+                margin-left: 50px; /* Adjust logo position to avoid overlap */
+            }
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <header class="bg-light py-3">
+        <div class="container-fluid d-flex justify-content-between">
+            <!-- Desktop Navbar -->
+            <div class="navbar-left bg-white d-flex align-items-center d-none d-lg-flex">
+                <a href="/" class="navbar-brand">
+                    <img class="img-fluid" src="{{ url_for('static', filename='images/hershey.png') }}" alt="Hersheys Career Home" style="max-height: 100px;"> 
+                </a>
+            </div>
+            <div class="navbar-right flex-grow-1 d-none d-lg-flex">
+                <nav class="navbar navbar-expand-lg navbar-dark">
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto" style="padding-left: 40px;">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{url_for('main.index')}}" target="_blank">HOME</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{url_for('main.about')}}" target="_blank">ABOUT US</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{url_for('main.form')}}" target="_blank">APPLY NOW</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('main.contactus') }}" target="_blank">CONTACT US</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- Mobile Navbar -->
+            <div class="d-flex d-lg-none w-100 justify-content-between align-items-center">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNavbar" aria-controls="mobileNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a href="/" class="navbar-brand">
+                    <img class="img-fluid" src="{{ url_for('static', filename='images/hershey.png') }}" alt="Hersheys Career Home" style="max-height: 50px;">
+                </a>
+            </div>
+            <div class="collapse navbar-collapse d-lg-none" id="mobileNavbar">
+                <ul class="navbar-nav text-center bg-chocolate text-light" style="width: 100%;">
+                    <li class="nav-item text-light">
+                        <a class="nav-link text-light" href="{{url_for('main.index')}}">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="{{url_for('main.about')}}">ABOUT US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="{{url_for('main.form')}}">APPLY NOW</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="{{ url_for('main.contactus') }}">CONTACT US</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container-fluid" style="margin-top: -80px;">
+            {% block content %}
+            <!-- Dynamic content will be inserted here -->
+            {% endblock %}
+        </div>
+    </main>
+
+    <footer id="footer" role="contentinfo">
+        <div id="footerRowTop" class="footer footerRow bg-light text-chocolate py-4">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-md-4 text-center">
+                        <a href="{{url_for('main.index')}}" class="navbar-brand">
+                            <img class="logo img-fluid" src="{{ url_for('static', filename='images/hershey.png') }}" alt="Hershey Logo" style="max-height: 100px; margin-left: 0;">
+                        </a>
+                        <ul class="list-inline mt-2">
+                            <li class="list-inline-item"><a href="{{url_for('main.contactus')}}" class="text-chocolate" target="_blank">CONTACT US</a></li>
+                            <li class="list-inline-item">|</li>
+                            <li class="list-inline-item"><a href="https://www.thehersheycompany.com/en_us/home/faqs.html" class="text-chocolate" target="_blank">FAQ's</a></li>
+                            <li class="list-inline-item">|</li>
+                            <li class="list-inline-item"><a href="#" class="text-chocolate" target="_blank">PRIVACY POLICY</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 text-center text-dark">
+                        <ul class="list-inline mt-2">
+                            <li class="list-inline-item">
+                                <a href="https://www.facebook.com/HersheyCompany/" class="text-dark" target="_blank" title="Facebook">
+                                    <i class="fab fa-facebook fa-2x"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://twitter.com/hersheycompany" class="text-dark" target="_blank" title="Twitter">
+                                    <i class="fab fa-twitter fa-2x"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://www.instagram.com/hersheycompany/" class="text-dark" target="_blank" title="Instagram">
+                                    <i class="fab fa-instagram fa-2x"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://www.linkedin.com/company/the-hershey-company" class="text-dark" target="_blank" title="LinkedIn">
+                                    <i class="fab fa-linkedin fa-2x"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://www.youtube.com/channel/UC7JmBzSkSkndBJdlREKUfUA" class="text-dark" target="_blank" title="YouTube">
+                                    <i class="fab fa-youtube fa-2x"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footerRowBottom" class="footer footerRow text-chocolate py-2">
+            <div class="container-fluid">
+                <p class="mb-0">© 2025 THE HERSHEY COMPANY. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

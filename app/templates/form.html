@@ -1,0 +1,54 @@
+{% extends 'layout.html' %}
+
+{% block title %}Application Form{% endblock %}
+ 
+{% block content %}
+<div class="container py-5">
+    <h1 class="text-center mb-4" style="color: #5a1a23; font-weight: bold;">Start Your Journey with Us</h1>
+    <p class="text-center mb-4" style="background-color: #7b3f00; color: white; padding: 10px; border-radius: 5px;">
+        Please fill out the form below carefully. Fields marked with an asterisk (*) are required. Ensure all information is accurate before submitting.
+        <br><strong>Note:</strong> Your application will be sent to our team via email.
+    </p>
+    <form method="POST" action="{{ url_for('main.form') }}" class="bg-light p-5 rounded shadow-lg" style="max-width: 600px; margin: 0 auto; border: 1px solid #ddd;">
+        <div class="mb-3">
+            <input type="text" id="name" name="name" class="form-control" placeholder="Name" required style="border-radius: 10px; border: 1px solid #ccc; padding: 15px;">
+        </div>
+        <div class="mb-3">
+            <input type="text" id="country" name="country" class="form-control" placeholder="Country" required style="border-radius: 10px; border: 1px solid #ccc; padding: 15px;">
+        </div>
+        <div class="mb-3">
+            <input type="text" id="city" name="city" class="form-control" placeholder="City" required style="border-radius: 10px; border: 1px solid #ccc; padding: 15px;">
+        </div>
+        <div class="mb-3">
+            <input type="text" id="town" name="town" class="form-control" placeholder="Town" style="border-radius: 10px; border: 1px solid #ccc; padding: 15px;">
+        </div>
+        <div class="mb-3">
+                        <input type="date" id="dob" name="dob" class="form-control" placeholder="BirthDate" required style="border-radius: 10px; border: 1px solid #ccc; padding: 15px;" value="2000-01-01">
+        </div>
+        <div class="mb-3">
+            <input type="text" id="pob" name="pob" class="form-control" placeholder="Place of Birth" required style="border-radius: 10px; border: 1px solid #ccc; padding: 15px;">
+        </div>
+        <div class="mb-3">
+            <input type="text" id="contact" name="contact" class="form-control" placeholder="Contact" required style="border-radius: 10px; border: 1px solid #ccc; padding: 15px;">
+        </div>
+        <div class="mb-3">
+            <select id="job" name="job" class="form-select" required style="border-radius: 10px; border: 1px solid #ccc; padding: 15px;">
+                <option value="">-- Choose a Job --</option>
+                <option value="Preparation of Chocolate">Preparation of Chocolate</option>
+                <option value="Security Job">Security Job</option>
+                <option value="Driving Job">Driving Job</option>
+                <option value="Sales Representative">Sales Representative</option>
+                <option value="Cleaning Service">Cleaning Service</option>
+                <option value="Cook">Cook</option>
+                <option value="Internal and External Decorator">Internal and External Decorator</option>
+                <option value="Building Construction">Building Construction</option>
+                <option value="Company Electrician">Company Electrician</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <textarea id="signature" name="signature" rows="3" class="form-control" placeholder="Signature" required style="border-radius: 10px; border: 1px solid #ccc; padding: 15px;"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary w-100" style="background-color: #5a1a23; border: none; border-radius: 10px; padding: 15px; font-size: 18px;">Submit Application</button>
+    </form>
+</div>
+{% endblock %}

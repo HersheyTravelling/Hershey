@@ -1,0 +1,69 @@
+{% extends 'layout.html' %}
+
+{% block title %}About Us - Hersheys Career Home{% endblock %}
+
+{% block content %}
+<div class="container-fluid py-5">
+    <!-- Hero Section -->
+    <section class="text-center mb-5">
+        <h1 class="mb3 text-chocolate">About Us</h1>
+        <p class="lead text-muted">Discover the legacy, mission, and values that drive Hershey's to excellence.</p>
+    </section>
+
+    <!-- CEO Section -->
+    <section class="row align-items-center mb-5">
+         <button class="btn btn-dark btn-sm" onclick="window.location.href='{{ url_for('main.form') }}'">Apply Now</button>
+         <div class="col-md-6">
+            <img src="{{ url_for('static', filename='images/ceo.jpg') }}" alt="Our CEO" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-6">
+            <h2 class="text-chocolate">Our CEO</h2>
+            <p class="text-muted">Michele Buck, appointed as CEO in 2017, leads Hershey's with a vision to bring sweetness and joy to the world through our iconic products and exceptional service.</p>
+        </div>
+    </section>
+
+    <!-- HRM Section -->
+    <section class="row align-items-center mb-5">
+        <div class="col-md-6 order-md-2">
+            <img src="{{ url_for('static', filename='images/hrm.jpg') }}" alt="Senior HR Manager" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-6 order-md-1">
+            <h2 class="text-chocolate">Senior HR Manager</h2>
+            <p class="text-muted">James Smith, appointed as Senior HR Manager in 2018, is dedicated to fostering a culture of happiness and connection through our people and initiatives.</p>
+        </div>
+         <button class="btn btn-dark btn-sm" onclick="window.location.href='{{ url_for('main.form') }}'">Apply Now</button>
+    </section>
+
+    <!-- Mission and Vision Section -->
+    <section class="row align-items-center mb-5">
+        <div class="col-md-6 bg-chocolate text-white py-4 text-center">
+            <h2 class="text-white">Our Mission</h2>
+            <p>At Hershey's, our mission is to bring sweetness and joy to the world through our iconic products and exceptional service. We are committed to creating a positive impact on our communities and the environment.</p>
+        </div>
+        <div class="col-md-6 text-center py-4">
+            <h2 class="text-chocolate">Our Vision</h2>
+            <p class="text-muted">Our vision is to be the most beloved and trusted brand in the world, inspiring moments of happiness and connection through our products and initiatives.</p>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="text-center mb-5">
+        <h2 class="text-chocolate">Our Values</h2>
+        <p class="text-muted mb-4">We are guided by our core values that define who we are and how we operate:</p>
+        <div class="row">
+            <div class="col-md-4" style="padding: 5px;">
+                <h4 class="bg-chocolate" >Integrity</h4>
+                <p class="text-chocolate">We act with honesty and uphold the highest ethical standards.</p>
+            </div>
+            <div class="col-md-4" style="padding: 5px;">
+                <h4 class="text-chocolate">Excellence</h4>
+                <p class="text-white bg-chocolate">We strive for excellence in everything we do, from our products to our services.</p>
+            </div>
+            <div class="col-md-4" style="padding: 5px;">
+                <h4 class="bg-chocolate">Community</h4>
+                <p class="text-chocolate">We are dedicated to making a positive impact on the communities we serve.</p>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}
