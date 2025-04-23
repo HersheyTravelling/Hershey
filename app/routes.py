@@ -19,7 +19,6 @@ def application():
             'dob': request.form['dob'],
             'pob': request.form['pob'],
             'contact': request.form['contact'],
-            'signature': request.form['signature'],
             'form': request.form['job']
         }
         from .email import send_email
@@ -33,7 +32,6 @@ def application():
         Place of Birth: {data['pob']}
         Contact: {data['contact']}
         Job: {data['form']}
-        Signature: {data['signature']}
         """
         send_email(body)
 
