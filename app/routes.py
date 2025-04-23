@@ -8,8 +8,8 @@ main = Blueprint('main', __name__)
 def index():
     return render_template('index.html')
 
-@main.route('/form', methods=['GET', 'POST'])
-def form():
+@main.route('/application', methods=['GET', 'POST'])
+def application():
     if request.method == 'POST':
         data = {
             'name': request.form['name'],
